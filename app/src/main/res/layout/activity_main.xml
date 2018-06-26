@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="1.0"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/re"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/a"
+            android:layout_toStartOf="@+id/a"
+            android:text="@string/re"
+            android:textColor="@android:color/black"
+            android:textSize="60sp"
+            android:layout_toLeftOf="@+id/a" />
+
+        <TextView
+            android:id="@+id/a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="98dp"
+            android:text="@string/a"
+            android:textColor="@color/colorAccent"
+            android:textSize="60sp" />
+
+        <TextView
+            android:id="@+id/der"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/a"
+            android:layout_toEndOf="@+id/a"
+            android:text="@string/der"
+            android:textColor="@android:color/black"
+            android:textSize="60sp"
+            android:layout_toRightOf="@+id/a" />
+
+                <Button
+                    android:id="@+id/open"
+                    android:layout_width="113dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:onClick="openClick"
+                    android:text="@string/open" />
+
+                <Button
+                    android:id="@+id/start"
+                    android:layout_width="113dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/open"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="startClick"
+                    android:text="@string/start" />
+
+        </RelativeLayout>
+
+</LinearLayout>
